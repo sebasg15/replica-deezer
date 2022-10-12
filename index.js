@@ -91,4 +91,3 @@ cambiar(darkside, paradise, bfmv, borderLine, reptilia);
 cambiar(bfmv, paradise, darkside, borderLine, reptilia);
 cambiar(borderLine, paradise, darkside, bfmv, reptilia);
 cambiar(reptilia, paradise, darkside, bfmv, borderLine);
-3;
