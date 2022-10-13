@@ -10,25 +10,32 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	height: 100px;
+	height: 10vh;
 }
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.logo {
-	left: -60px;
-	position: relative;
+	text-align: center;
+	top: 50px;
+	font-size: larger;
 }
 .offer {
 	display: flex;
 	align-items: center;
-	width: 200px;
+	width: 15vw;
 	height: 100px;
 	border: 1px outset white;
 	border-radius: 10px;
 	justify-content: center;
+}
+.logo {
+	position: absolute;
+	width: 10vw;
+	top:5%;
+	left: 50%;
+	
+	transform: translate(-50%,-50%);
 }
 .login {
 	display: flex;
@@ -38,13 +45,9 @@ main {
 	border-radius: 40px;
 	width: 80px;
 	height: 50px;
+	cursor: pointer;
 }
-main {
-	position: relative;
-	text-align: center;
-	top: 50px;
-	font-size: larger;
-}
+
 .categories {
 	display: flex;
 	flex-direction: column;
@@ -69,7 +72,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 600px;
+	width: 40vw;
 	background: linear-gradient(to right, rgb(109, 66, 180), rgb(143, 59, 172));
 	border-radius: 20px;
 }
@@ -81,7 +84,7 @@ section p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 600px;
+	width: 40vw;
 	background: linear-gradient(70deg, rgb(229, 100, 24) 50%, rgb(248, 156, 41));
 	border-radius: 20px;
 }
@@ -89,7 +92,7 @@ section p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 600px;
+	width: 40vw;
 	background: linear-gradient(to right, rgb(122, 91, 234), rgb(61, 168, 186));
 	border-radius: 20px;
 }
@@ -111,7 +114,7 @@ div button:hover {
 .extras {
 	margin-top: -30px;
 	display: grid;
-	width: 600px;
+	width: 40vw;
 	gap: 30px;
 }
 .extra {
@@ -125,7 +128,7 @@ div button:hover {
 }
 .descuento {
 	position: relative;
-	right: -200px;
+	left: 200px;
 	border-radius: 10px;
 	width: 48px;
 	background: linear-gradient(to right, rgb(122, 91, 234), rgb(61, 168, 186));
@@ -141,10 +144,8 @@ div button:hover {
 	font-size: 42px;
 }
 .about p {
-	margin: auto;
 	width: 600px;
-	font-size: 16px;
-	font-weight: 0;
+	font-size: 18px;
 }
 .btn {
 	margin-top: 40px;
@@ -177,10 +178,10 @@ div button:hover {
 	height: 200px;
 	border-radius: 5px;
 }
-.play{
+.play {
 	cursor: pointer;
 }
-.cancion i{
+.cancion i {
 	position: relative;
 	bottom: 1.5em;
 	right: 4.2em;
@@ -198,7 +199,7 @@ div button:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 600px;
+	width: 80vw;
 	margin-top: 100px;
 	height: 10px;
 }
@@ -318,9 +319,48 @@ li {
 	align-self: center;
 }
 .last-logo {
-	height: 8em;
+	height: 7em;
 	width: 10em;
 }
+
+.formulario {
+	position: absolute;
+	display: none;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 40vw;
+	padding: 20px;
+}
+.formulario h2 {
+	color: white;
+}
+
+input {
+	width: 100%;
+	border-radius: 10px;
+	color: black;
+	height: 30px;
+}
+
+.close {
+	position: relative;
+	bottom: 52vh;
+	left: 18vw;
+	width: 1px;
+	color: white;
+	cursor: pointer;
+}
+.formulario .btn {
+	width: 40%;
+}
+
 ::-webkit-scrollbar {
 	background: rgb(25, 25, 34);
 	border-left: 1px solid rgb(50, 50, 61);
@@ -331,9 +371,88 @@ li {
 	border-radius: 15px;
 	border: 1px solid rgb(50, 50, 61);
 }
-@media(max-width:800px){
-	#canciones{
+@media (max-width: 800px) {
+	.categories button {
+		width: 30vw;
+	}
+	.categories h2 {
+		font-size: 30px;
+	}
+	.about h1 {
+		font-size: 30px;
+	}
+	.about p {
+		width: 60vw;
+	}
+	.imgs {
+		width: 100vw;
+	}
+	.p-solo {
+		width: 70vw;
+	}
+	.img-text {
+		width: 90vw;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	.offer {
+		width: 25vw;
+		height: 10vh;
+	}
+	.logo {
+	width: 30vw;
+	}
+	h2 {
+		font-size: 25px;
+	}
+	.FAQ h2 {
+		font-size: 20px;
+	}
+	.questions {
+		width: 70vw;
+		justify-content: space-between;
+		align-self: center;
+	}
+	.free {
+		width: 70vw;
+	}
+	.family {
+		width: 70vw;
+	}
+	.premium {
+		width: 70vw;
+	}
+	.extras {
+		width: 70vw;
+	}
+	.descuento {
+		left: 20%;
+	}
+	#canciones {
 		display: flex;
 		flex-direction: column;
+	}
+	ul {
+		width: 70vw;
+		align-self: center;
+	}
+	.title-large {
+		font-size: 30px;
+		width: 70vw;
+	}
+	.lists {
+		flex-wrap: wrap;
+	}
+	.contact {
+		flex-direction: column;
+		align-items: center;
+	}
+	.formulario {
+		width: 80vw;
+	}
+	.close {
+		bottom: 58vh;
+		left: 32vw;
 	}
 }
