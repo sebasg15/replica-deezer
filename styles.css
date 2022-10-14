@@ -10,12 +10,14 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	height: 10vh;
 }
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	text-align: center;
 	top: 50px;
 	font-size: larger;
@@ -32,10 +34,9 @@ main {
 .logo {
 	position: absolute;
 	width: 10vw;
-	top:5%;
+	top: 5%;
 	left: 50%;
-	
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
 .login {
 	display: flex;
@@ -360,6 +361,25 @@ input {
 .formulario .btn {
 	width: 40%;
 }
+.container-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.container-list li {
+	line-height: 70px;
+}
+.lresponsive {
+	
+	justify-content: center;
+
+	flex-direction: column;
+	font-size: 30px;
+}
+.responsive-login {
+	cursor: pointer;
+}
 
 ::-webkit-scrollbar {
 	background: rgb(25, 25, 34);
@@ -372,13 +392,31 @@ input {
 	border: 1px solid rgb(50, 50, 61);
 }
 @media (max-width: 800px) {
+	.x {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+	}
+	header {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-self: start;
+	}
+	.container-list {
+		z-index: 0;
+		padding: 0;
+	}
+	.container-list > li {
+		position: relative;
+		top: -100px;
+		line-height: 60px;
+		color: white;
+	}
 	.categories button {
 		width: 30vw;
 	}
-	.categories h2 {
-		font-size: 30px;
-	}
-	.about h1 {
+	.categories h2, .about h1 {
 		font-size: 30px;
 	}
 	.about p {
@@ -396,31 +434,23 @@ input {
 	h1 {
 		font-size: 30px;
 	}
-	.offer {
-		width: 25vw;
-		height: 10vh;
+	.offer,
+	.login {
+		display: none !important;
 	}
 	.logo {
-	width: 30vw;
+		margin-top: 8px;
+		width: 30vw;
 	}
-	h2 {
-		font-size: 25px;
-	}
-	.FAQ h2 {
-		font-size: 20px;
+	h2,.FAQ h2  {
+		font-size: 22px;
 	}
 	.questions {
 		width: 70vw;
 		justify-content: space-between;
 		align-self: center;
 	}
-	.free {
-		width: 70vw;
-	}
-	.family {
-		width: 70vw;
-	}
-	.premium {
+	.free,.family,.premium,.extras {
 		width: 70vw;
 	}
 	.extras {
